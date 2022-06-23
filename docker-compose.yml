@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "app_db"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "654zz321xx"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - .:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    environment:
+      DATABASE_URL: "postgresql+asyncpg://postgres:654zz321xx@db:5432/app_db"
+    build: .
+    ports:
+      - "80:80"
+    depends_on:
+      - db

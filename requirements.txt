@@ -1,0 +1,7 @@
+SQLAlchemy~=1.4.37
+alembic~=1.8.0
+fastapi~=0.78.0
+pydantic~=1.9.1
+psycopg2~=2.9.3
+uvicorn~=0.17.6
+asyncpg~=0.25.0

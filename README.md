@@ -16,6 +16,16 @@ sudo make build run
 sudo make init_and_migrate 
 ```
 
+Для остановки используйте:
+```cmd
+sudo make stop 
+```
+
+Для удаления контейнера:
+```cmd
+sudo make destroy 
+```
+
 ## Структура проекта
 
 - `docker-compose.yml` - файл для запуска проекта в Docker-контейнерах (сервер и БД)
